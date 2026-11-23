@@ -38,7 +38,6 @@
       <div class="grades">
      
         
-<div class="grades">
 
   <article class="grade">
     <div class="number">❴1❵</div>
@@ -82,35 +81,35 @@
     <div class="symbol">⌨</div>
     <h3>Intro to CS</h3>
     <p>مقدمة في علوم الحاسب</p>
-    <button class="enter">ادخل الآن　❯</button>
+    <a class="enter" href="college.html">ادخل الآن　❯</a>
   </article>
 
   <article class="subject">
     <div class="symbol">▦</div>
     <h3>Electronics</h3>
     <p>الإلكترونيات</p>
-    <button class="enter">ادخل الآن　❯</button>
+    <a class="enter" href="college.html">ادخل الآن　❯</a>
   </article>
 
   <article class="subject">
     <div class="symbol">⚛</div>
     <h3>Physics</h3>
     <p>الفيزياء</p>
-    <button class="enter">ادخل الآن　❯</button>
+    <a class="enter" href="college.html">ادخل الآن　❯</a>
   </article>
 
   <article class="subject">
     <div class="symbol">∑</div>
     <h3>Math 1</h3>
     <p>رياضيات متقدمة</p>
-    <button class="enter">ادخل الآن　❯</button>
+    <a class="enter" href="college.html">ادخل الآن　❯</a>
   </article>
 
   <article class="subject">
     <div class="symbol">▦</div>
     <h3>Math Zero</h3>
     <p>رياضيات تمهيدية</p>
-    <button class="enter">ادخل الآن　❯</button>
+    <a class="enter" href="college.html">ادخل الآن　❯</a>
   </article>
 
 </div>
@@ -123,10 +122,12 @@
     
     <a class="nav-link" href="first-grade.html"><span>الصف الأول الثانوي</span><span class="ico">›</span></a>
 
-    <a class="nav-link" href="#"><span>الصف الثاني الثانوي</span><span class="ico">›</span></a>
-<a class="nav-link" href="#"><span>الصف الثالث الثانوي</span><span class="ico">›</span></a>
+
+<a class="nav-link" href="second-grade.html"><span>الصف الثاني الثانوي</span><span class="ico">›</span></a>
+
+<a class="nav-link" href="third-grade.html"><span>الصف الثالث الثانوي</span><span class="ico">›</span></a>
     <div class="nav-divider"></div>
-    <a class="nav-link" href="#"><span>كلية الحاسبات</span><span class="ico">▣</span></a>
+    <a class="nav-link" href="college.html"><span>كلية الحاسبات</span><span class="ico">▣</span></a>
     <a class="nav-link nav-small" href="#"><span>البرمجة وعلوم الحاسب</span><span class="ico">›</span></a>
     <a class="nav-link nav-small" href="#"><span>الرياضيات</span><span class="ico">›</span></a>
     <a class="nav-link nav-small" href="#"><span>الإلكترونيات</span><span class="ico">›</span></a>
@@ -143,6 +144,14 @@
 <script>
 document.getElementById('theme').addEventListener('click',()=>document.documentElement.classList.toggle('light'));
 document.getElementById('send').addEventListener('click',()=>{const q=document.getElementById('question');if(q.value.trim()){alert('المساعد الذكي قيد التجهيز.');q.value='';}});
+  document.querySelectorAll('.grade').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', event => {
+    if (event.target.closest('a')) return;
+    const link = card.querySelector('a[href]');
+    if (link) window.location.href = link.href;
+  });
+});
 </script>
 </body>
 </html>
