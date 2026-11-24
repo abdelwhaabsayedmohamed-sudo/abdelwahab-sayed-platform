@@ -1,157 +1,803 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ABDELWAHAB SAYED</title>
+
 <style>
-:root{--bg:#020b20;--panel:#061a3b;--panel2:#092858;--line:#0876dc;--cyan:#00d9ff;--blue:#087cff;--white:#f4f8ff;--muted:#c7d8f4;--gold:#ffdb35;--purple:#9c27ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#073477 0,#020b20 48%,#010719 100%);color:var(--white);font-family:Tahoma,Arial,sans-serif;min-height:100vh}button,a{font:inherit}button{cursor:pointer;color:inherit}.topbar{height:90px;border-bottom:1px solid #0758a9;display:flex;align-items:center;justify-content:space-between;padding:10px 25px;gap:18px;background:#020b20eF;position:relative;z-index:5}.brand{display:flex;align-items:center;gap:15px}.brand-icon{font-size:44px;filter:drop-shadow(0 0 12px #00aaff)}.brand-name{font-size:29px;font-weight:900;letter-spacing:.5px;direction:ltr}.brand-sub{font-size:15px;color:#dceaff}.top-tools{display:flex;align-items:center;gap:30px}.search{width:400px;border:1px solid #075fbd;border-radius:30px;padding:12px 20px;background:#061b3c;color:white;box-shadow:0 0 15px #007bff55}.search::placeholder{color:#c3d7f5}.round{border:1px solid #1457a1;background:#061b3c;border-radius:30px;padding:10px 16px;font-size:22px;box-shadow:0 0 12px #087cff55}.notification{position:relative}.notification:after{content:'3';position:absolute;top:-5px;right:-5px;background:#ed334b;border-radius:50%;font-size:12px;padding:2px 7px}.page{display:grid;grid-template-columns:270px minmax(0,1fr) 220px;gap:16px;padding:14px 17px 0;max-width:1600px;margin:auto}.assistant,.side,.section-box,.banner{border:1px solid #0878e7;border-radius:20px;background:linear-gradient(145deg,#061a3c,#03112a);box-shadow:0 0 12px #008dff55,inset 0 0 18px #087cff22}.assistant{padding:18px 16px;align-self:start;text-align:center;min-height:590px;margin-top:210px}.assistant h3{color:#63eaff;margin:5px 0 18px;font-size:20px}.bot{font-size:112px;line-height:1.3;filter:drop-shadow(0 0 15px #00bfff)}.bubble{background:#e6f1ff;color:#10213d;border-radius:20px;padding:14px 12px;font-weight:bold;margin:8px 0 24px;box-shadow:0 0 15px #70caff55}.quick{width:100%;border:1px solid #075ebd;border-radius:18px;background:linear-gradient(100deg,#071c40,#0a2d61);padding:11px 12px;margin:5px 0;text-align:right;font-weight:bold;box-shadow:0 0 10px #007bff33}.quick span{font-size:21px;margin-left:8px;color:#00dfff}.ask{display:flex;margin-top:14px;border:1px solid #087cff;border-radius:25px;overflow:hidden}.ask input{min-width:0;flex:1;background:#03132d;border:0;padding:12px;color:white;outline:0}.ask button{border:0;background:#075bea;padding:0 17px;font-size:23px}.center{min-width:0}.banner{height:185px;display:flex;align-items:center;justify-content:space-between;overflow:hidden;padding:18px 28px;margin-bottom:23px;background:radial-gradient(circle at 15% 50%,#067cdb88,transparent 32%),linear-gradient(110deg,#061b48,#073477 48%,#07183c);position:relative}.banner:before{content:'E = mc²     ⚛';position:absolute;left:25%;top:10px;font-size:34px;color:#d9edff88;letter-spacing:8px}.banner:after{content:'';position:absolute;left:40%;bottom:-55px;width:300px;height:90px;border-top:8px solid #ffdb35;border-radius:50%;transform:rotate(-7deg)}.banner-books{font-size:76px;z-index:1;filter:drop-shadow(0 0 12px #008dff)}.banner-title{text-align:center;z-index:1}.banner-title h1{font-size:36px;margin:0 0 6px}.banner-title p{font-size:21px;margin:0}.banner-motto{font-size:31px;color:#ffe34d;font-style:italic;direction:ltr;z-index:1;text-align:center}.section-box{padding:13px;margin-bottom:18px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:0 10px 12px}.section-head h2{font-size:27px;margin:0}.section-head p{font-size:15px;margin:0;color:#d5e6ff}.atom{font-size:36px;color:#00dcff}.grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.grade{height:198px;border:1px solid #0aa9ff;border-radius:21px;padding:10px 13px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:space-around;position:relative;overflow:hidden;box-shadow:inset 0 0 22px #00aaff55,0 0 12px #008cff55}.grade:nth-child(1){background:radial-gradient(circle at 90% 50%,#008dff88,transparent 50%),linear-gradient(135deg,#06366c,#031735)}.grade:nth-child(2){background:radial-gradient(circle at 90% 50%,#c000ff88,transparent 50%),linear-gradient(135deg,#451080,#160b39);border-color:#a52cff}.grade:nth-child(3){background:radial-gradient(circle at 90% 50%,#00c6a888,transparent 50%),linear-gradient(135deg,#075e68,#06243e);border-color:#00d6c5}.grade .number{font-size:35px;color:var(--gold);font-weight:900;text-shadow:0 0 9px #ffc800}.grade h3{font-size:23px;margin:0}.grade p{font-size:15px;margin:0;color:#e0eeff}.grade .art{position:absolute;left:8px;top:45px;font-size:52px;opacity:.9}.enter{border:1px solid #00bfff;border-radius:30px;padding:8px 25px;background:linear-gradient(90deg,#0754e8,#00a9ff);font-weight:bold;box-shadow:0 0 12px #00aaff77}.college{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.subject{min-height:172px;border:1px solid #0879ba;border-radius:18px;background:linear-gradient(145deg,#092a55,#04142e);box-shadow:inset 0 0 16px #00bfff22;display:flex;flex-direction:column;align-items:center;justify-content:space-around;text-align:center;padding:8px}.subject .symbol{font-size:43px;color:#00dfff;text-shadow:0 0 12px #00cfff}.subject h3{font-size:19px;margin:0;direction:ltr}.subject p{font-size:15px;margin:0;color:#d8e9ff}.subject .enter{padding:7px 17px}.side{align-self:start;padding:12px 10px}.nav-link{display:flex;align-items:center;justify-content:space-between;gap:7px;padding:12px 10px;margin:4px 0;border-radius:15px;color:#edf5ff;text-decoration:none;font-weight:bold;font-size:16px;border:1px solid transparent}.nav-link:hover,.nav-link.active{background:linear-gradient(90deg,#0754bb,#087cff);border-color:#39cfff;box-shadow:0 0 12px #008cff}.nav-link .ico{font-size:22px;color:#00dfff}.nav-title{color:var(--gold);padding:10px;font-weight:bold}.nav-divider{border-top:1px solid #16416e;margin:9px 0}.nav-small{font-size:15px;padding:9px 12px}.nav-button{width:100%;border:1px solid #1555a4;border-radius:17px;background:linear-gradient(90deg,#071a3b,#12366b);padding:11px;margin:4px 0;text-align:right;font-weight:bold;font-size:15px}.nav-button.purple{background:linear-gradient(90deg,#5414bc,#9b25ff);border-color:#c26cff}.footer{max-width:1600px;margin:7px auto 0;border:1px solid #174a9c;border-radius:22px 22px 0 0;background:linear-gradient(90deg,#04132e,#071d45);min-height:70px;display:flex;align-items:center;justify-content:space-around;gap:14px;padding:12px 18px;color:#e7efff;font-size:15px}.footer .slogan{color:#ffd52f;font-weight:bold}.footer a{color:inherit;text-decoration:none}.light{--bg:#edf4ff;--panel:#fff;--panel2:#e7efff;--white:#10213d;--muted:#334b6c}.light body{background:#edf4ff;color:#10213d}
-@media(max-width:1150px){.page{grid-template-columns:220px minmax(0,1fr) 190px;gap:10px;padding-inline:10px}.assistant{padding:12px}.grades{gap:8px}.grade h3{font-size:18px}.college{grid-template-columns:repeat(3,1fr)}.banner-title h1{font-size:28px}.banner-books{font-size:55px}}
-@media(max-width:850px){.topbar{height:auto;flex-wrap:wrap;padding:12px}.top-tools{order:2;width:100%;gap:10px}.search{flex:1;width:auto}.brand-name{font-size:20px}.page{grid-template-columns:minmax(0,1fr) 220px}.side{grid-row:1}.assistant{margin-top:0;min-height:0}.bot{font-size:70px}.banner{height:auto;min-height:150px}.grades{grid-template-columns:1fr}.grade{height:180px}.college{grid-template-columns:repeat(2,1fr)}.footer{flex-wrap:wrap;text-align:center}.nav-link{display:inline-flex;width:48%}}
-@media(max-width:480px){.brand-icon{font-size:30px}.brand-name{font-size:16px}.brand-sub{font-size:11px}.top-tools{flex-wrap:wrap}.search{order:3;flex-basis:100%}.banner{padding:12px}.banner-books{font-size:35px}.banner-title h1{font-size:20px}.banner-title p{font-size:14px}.banner-motto{font-size:17px}.section-head h2{font-size:20px}.section-head p{font-size:12px}.college{grid-template-columns:repeat(2,minmax(0,1fr))}.subject h3{font-size:15px}.subject p{font-size:12px}.nav-link{width:100%}}
+:root{
+  --bg:#020b20;
+  --panel:#061a3b;
+  --panel2:#092858;
+  --line:#0876dc;
+  --cyan:#00d9ff;
+  --blue:#087cff;
+  --white:#f4f8ff;
+  --muted:#c7d8f4;
+  --gold:#ffdb35;
+  --purple:#9c27ff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:radial-gradient(ellipse at 50% 0%,#073477 0,#020b20 48%,#010719 100%);
+  color:var(--white);
+  font-family:Tahoma,Arial,sans-serif;
+  min-height:100vh;
+}
+
+button,a{font:inherit}
+button{cursor:pointer;color:inherit}
+
+/* الشريط العلوي */
+.topbar{
+  min-height:90px;
+  border-bottom:1px solid #0758a9;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 25px;
+  gap:18px;
+  background:#020b20ef;
+  position:relative;
+  z-index:5;
+}
+
+.brand{display:flex;align-items:center;gap:15px}
+.brand-icon{font-size:44px;filter:drop-shadow(0 0 12px #00aaff)}
+.brand-name{font-size:29px;font-weight:900;letter-spacing:.5px;direction:ltr}
+.brand-sub{font-size:15px;color:#dceaff}
+
+.top-tools{display:flex;align-items:center;gap:20px}
+.search{
+  width:400px;
+  border:1px solid #075fbd;
+  border-radius:30px;
+  padding:12px 20px;
+  background:#061b3c;
+  color:white;
+  box-shadow:0 0 15px #007bff55;
+}
+.search::placeholder{color:#c3d7f5}
+.round{
+  border:1px solid #1457a1;
+  background:#061b3c;
+  border-radius:30px;
+  padding:10px 16px;
+  font-size:22px;
+  box-shadow:0 0 12px #087cff55;
+}
+.notification{position:relative}
+.notification:after{
+  content:'3';
+  position:absolute;
+  top:-5px;
+  right:-5px;
+  background:#ed334b;
+  border-radius:50%;
+  font-size:12px;
+  padding:2px 7px;
+}
+
+/* تقسيم الصفحة: المساعد يسار، المحتوى وسط، القائمة يمين */
+.page{
+  direction:ltr;
+  display:grid;
+  grid-template-columns:220px minmax(0,1fr) 250px;
+  grid-template-areas:"assistant center side";
+  gap:16px;
+  padding:14px 17px 0;
+  max-width:1600px;
+  margin:auto;
+  align-items:start;
+}
+
+.assistant,.side,.section-box,.banner{
+  border:1px solid #0878e7;
+  border-radius:20px;
+  background:linear-gradient(145deg,#061a3c,#03112a);
+  box-shadow:0 0 12px #008dff55,inset 0 0 18px #087cff22;
+}
+
+.assistant{
+  grid-area:assistant;
+  direction:rtl;
+  padding:18px 16px;
+  text-align:center;
+  min-height:590px;
+  margin-top:210px;
+}
+
+.assistant h3{color:#63eaff;margin:5px 0 18px;font-size:20px}
+.bot{font-size:112px;line-height:1.3;filter:drop-shadow(0 0 15px #00bfff)}
+.bubble{
+  background:#e6f1ff;
+  color:#10213d;
+  border-radius:20px;
+  padding:14px 12px;
+  font-weight:bold;
+  margin:8px 0 24px;
+  box-shadow:0 0 15px #70caff55;
+}
+.quick{
+  width:100%;
+  border:1px solid #075ebd;
+  border-radius:18px;
+  background:linear-gradient(100deg,#071c40,#0a2d61);
+  padding:11px 12px;
+  margin:5px 0;
+  text-align:right;
+  font-weight:bold;
+  box-shadow:0 0 10px #007bff33;
+}
+.quick span{font-size:21px;margin-left:8px;color:#00dfff}
+.ask{
+  display:flex;
+  margin-top:14px;
+  border:1px solid #087cff;
+  border-radius:25px;
+  overflow:hidden;
+}
+.ask input{
+  min-width:0;
+  flex:1;
+  background:#03132d;
+  border:0;
+  padding:12px;
+  color:white;
+  outline:0;
+}
+.ask button{border:0;background:#075bea;padding:0 17px;font-size:23px}
+
+/* مساحة المحتوى */
+.center{
+  grid-area:center;
+  direction:rtl;
+  min-width:0;
+}
+
+.banner{
+  height:185px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  overflow:hidden;
+  padding:18px 28px;
+  margin-bottom:23px;
+  background:
+    radial-gradient(circle at 15% 50%,#067cdb88,transparent 32%),
+    linear-gradient(110deg,#061b48,#073477 48%,#07183c);
+  position:relative;
+}
+
+/* إزالة الزخرفة التي كانت تتداخل مع عنوان البانر */
+.banner:before{content:none}
+
+.banner:after{
+  content:'';
+  position:absolute;
+  left:40%;
+  bottom:-55px;
+  width:300px;
+  height:90px;
+  border-top:8px solid #ffdb35;
+  border-radius:50%;
+  transform:rotate(-7deg);
+  pointer-events:none;
+}
+
+.banner-books{
+  font-size:76px;
+  z-index:1;
+  filter:drop-shadow(0 0 12px #008dff);
+}
+.banner-title{text-align:center;z-index:1}
+.banner-title h1{font-size:36px;margin:0 0 6px}
+.banner-title p{font-size:21px;margin:0}
+.banner-motto{
+  font-size:31px;
+  color:#ffe34d;
+  font-style:italic;
+  direction:ltr;
+  z-index:1;
+  text-align:center;
+}
+
+.section-box{padding:13px;margin-bottom:18px}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 10px 12px;
+}
+.section-head h2{font-size:27px;margin:0}
+.section-head p{font-size:15px;margin:0;color:#d5e6ff}
+.atom{font-size:36px;color:#00dcff}
+
+/* بطاقات الصفوف */
+.grades{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:15px;
+}
+.grade{
+  height:198px;
+  border:1px solid #0aa9ff;
+  border-radius:21px;
+  padding:10px 13px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  position:relative;
+  overflow:hidden;
+  box-shadow:inset 0 0 22px #00aaff55,0 0 12px #008cff55;
+}
+.grade:nth-child(1){
+  background:radial-gradient(circle at 90% 50%,#008dff88,transparent 50%),linear-gradient(135deg,#06366c,#031735);
+}
+.grade:nth-child(2){
+  background:radial-gradient(circle at 90% 50%,#c000ff88,transparent 50%),linear-gradient(135deg,#451080,#160b39);
+  border-color:#a52cff;
+}
+.grade:nth-child(3){
+  background:radial-gradient(circle at 90% 50%,#00c6a888,transparent 50%),linear-gradient(135deg,#075e68,#06243e);
+  border-color:#00d6c5;
+}
+.grade .number{
+  font-size:35px;
+  color:var(--gold);
+  font-weight:900;
+  text-shadow:0 0 9px #ffc800;
+}
+.grade h3{font-size:23px;margin:0}
+.grade p{font-size:15px;margin:0;color:#e0eeff}
+.grade .art{position:absolute;left:8px;top:45px;font-size:52px;opacity:.9}
+
+.enter{
+  display:inline-block;
+  border:1px solid #00bfff;
+  border-radius:30px;
+  padding:8px 25px;
+  background:linear-gradient(90deg,#0754e8,#00a9ff);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 12px #00aaff77;
+}
+
+/* مواد الكلية الخمسة */
+.college{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+.subject{
+  min-height:172px;
+  border:1px solid #0879ba;
+  border-radius:18px;
+  background:linear-gradient(145deg,#092a55,#04142e);
+  box-shadow:inset 0 0 16px #00bfff22;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  text-align:center;
+  padding:8px;
+}
+.subject .symbol{font-size:43px;color:#00dfff;text-shadow:0 0 12px #00cfff}
+.subject h3{font-size:19px;margin:0;direction:ltr}
+.subject p{font-size:15px;margin:0;color:#d8e9ff}
+.subject .enter{padding:7px 17px}
+
+/* القائمة الجانبية اليمنى */
+.side{
+  grid-area:side;
+  direction:rtl;
+  align-self:start;
+  padding:12px 10px;
+  min-width:0;
+}
+
+.nav-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:7px;
+  padding:12px 10px;
+  margin:4px 0;
+  border-radius:15px;
+  color:#edf5ff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:16px;
+  border:1px solid transparent;
+  cursor:pointer;
+}
+.nav-link:hover,.nav-link.active{
+  background:linear-gradient(90deg,#0754bb,#087cff);
+  border-color:#39cfff;
+  box-shadow:0 0 12px #008cff;
+}
+.nav-link .ico{font-size:22px;color:#00dfff}
+.nav-title{color:var(--gold);padding:10px;font-weight:bold}
+.nav-divider{border-top:1px solid #16416e;margin:9px 0}
+.nav-small{font-size:15px;padding:9px 12px}
+.nav-button{
+  width:100%;
+  border:1px solid #1555a4;
+  border-radius:17px;
+  background:linear-gradient(90deg,#071a3b,#12366b);
+  padding:11px;
+  margin:4px 0;
+  text-align:right;
+  font-weight:bold;
+  font-size:15px;
+}
+.nav-button:hover{border-color:#39cfff;background:#0754bb}
+.nav-button.purple{background:linear-gradient(90deg,#5414bc,#9b25ff);border-color:#c26cff}
+
+/* الأقسام التي تظهر عند اختيار عناصر القائمة */
+.extra-view{
+  min-height:350px;
+  border:1px solid #0878e7;
+  border-radius:20px;
+  background:linear-gradient(145deg,#061a3c,#03112a);
+  box-shadow:0 0 12px #008dff55;
+  padding:25px;
+  margin-bottom:20px;
+}
+.extra-view h2{color:#63eaff;margin-top:0}
+.extra-view p{color:#d5e6ff;line-height:1.9}
+.view-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:20px;
+}
+.view-item{
+  background:linear-gradient(145deg,#092a55,#04142e);
+  border:1px solid #0879ba;
+  border-radius:15px;
+  padding:17px;
+  text-align:center;
+  color:#f4f8ff;
+  line-height:1.8;
+}
+.view-item strong{display:block;color:#00dfff;font-size:18px}
+.disabled-link{opacity:.55;cursor:not-allowed}
+[hidden]{display:none!important}
+
+/* التذييل */
+.footer{
+  max-width:1600px;
+  margin:7px auto 0;
+  border:1px solid #174a9c;
+  border-radius:22px 22px 0 0;
+  background:linear-gradient(90deg,#04132e,#071d45);
+  min-height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  gap:14px;
+  padding:12px 18px;
+  color:#e7efff;
+  font-size:15px;
+  flex-wrap:wrap;
+}
+.footer .slogan{color:#ffd52f;font-weight:bold}
+.footer a{color:inherit;text-decoration:none}
+
+/* الوضع الفاتح */
+.light body{background:#edf4ff;color:#10213d}
+.light .section-box,
+.light .assistant,
+.light .side,
+.light .extra-view{background:linear-gradient(145deg,#fff,#e7efff);color:#10213d}
+.light .nav-link{color:#10213d}
+.light .nav-button{color:white}
+
+/* الشاشات المتوسطة والصغيرة */
+@media(max-width:1150px){
+  .page{grid-template-columns:200px minmax(0,1fr) 225px;gap:10px;padding-inline:10px}
+  .assistant{padding:12px}
+  .grades{gap:8px}
+  .grade h3{font-size:18px}
+  .college{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .banner-title h1{font-size:28px}
+  .banner-books{font-size:55px}
+}
+
+/* القائمة تظل يمين والمحتوى يسار */
+@media(max-width:850px){
+  .topbar{height:auto;flex-wrap:wrap;padding:12px}
+  .top-tools{order:2;width:100%;gap:10px}
+  .search{flex:1;width:auto}
+  .brand-name{font-size:20px}
+
+  .page{
+    grid-template-columns:minmax(0,1fr) 210px;
+    grid-template-areas:"center side";
+    gap:10px;
+    padding-inline:10px;
+  }
+
+  .assistant{display:none}
+  .banner{height:auto;min-height:150px}
+  .grades{grid-template-columns:1fr}
+  .grade{height:180px}
+  .college{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer{text-align:center}
+}
+
+/* الهواتف */
+@media(max-width:480px){
+  .topbar{padding:9px}
+  .brand-icon{font-size:30px}
+  .brand-name{font-size:16px}
+  .brand-sub{font-size:11px}
+  .top-tools{flex-wrap:wrap}
+  .search{order:3;flex-basis:100%}
+
+  .page{
+    grid-template-columns:minmax(0,1fr) 125px;
+    grid-template-areas:"center side";
+    gap:7px;
+    padding:8px 6px 0;
+  }
+
+  .side{padding:7px 5px;border-radius:13px}
+  .nav-link{width:100%;font-size:11px;padding:10px 5px;gap:3px}
+  .nav-link .ico{font-size:15px}
+  .nav-title{font-size:11px;padding:7px 3px}
+  .nav-small{font-size:10px;padding:8px 4px}
+  .nav-button{font-size:10px;padding:9px 5px}
+  .banner{padding:12px;gap:5px}
+  .banner-books{font-size:30px}
+  .banner-title h1{font-size:17px}
+  .banner-title p{font-size:12px}
+  .banner-motto{font-size:15px}
+  .section-box{padding:8px}
+  .section-head h2{font-size:17px}
+  .section-head p{font-size:11px}
+  .atom{font-size:25px}
+  .college{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .subject{min-height:150px;padding:6px}
+  .subject h3{font-size:13px}
+  .subject p{font-size:11px}
+  .subject .enter{font-size:11px;padding:7px 9px}
+  .grade h3{font-size:17px}
+  .grade p{font-size:12px}
+  .view-list{grid-template-columns:1fr}
+  .extra-view{padding:14px}
+}
 </style>
 </head>
+
 <body>
+
 <header class="topbar">
-  <div class="top-tools"><button class="round" id="theme">🌙　☀️</button><button class="round notification" aria-label="الإشعارات">🔔</button><input class="search" placeholder="ابحث في المنصة...　⌕"></div>
-  <div class="brand"><div class="brand-icon">🎓</div><div><div class="brand-name">ABDELWAHAB SAYED</div><div class="brand-sub">منصة تعليمية متكاملة .. نحو مستقبل أفضل</div></div><div class="brand-icon">👨‍🎓</div></div>
+  <div class="top-tools">
+    <button class="round" id="theme">🌙　☀️</button>
+    <button class="round notification" aria-label="الإشعارات">🔔</button>
+    <input class="search" id="siteSearch" placeholder="ابحث في المنصة...　⌕">
+  </div>
+
+  <div class="brand">
+    <div class="brand-icon">🎓</div>
+    <div>
+      <div class="brand-name">ABDELWAHAB SAYED</div>
+      <div class="brand-sub">منصة تعليمية متكاملة .. نحو مستقبل أفضل</div>
+    </div>
+    <div class="brand-icon">👨‍🎓</div>
+  </div>
 </header>
+
 <div class="page">
+
+  <!-- المساعد الجانبي الأيسر -->
   <aside class="assistant">
-    <h3>المساعد الذكي</h3><div class="bot">🤖</div>
+    <h3>المساعد الذكي</h3>
+    <div class="bot">🤖</div>
     <div class="bubble">مرحبًا بك يا بطل!<br>كيف يمكنني مساعدتك اليوم؟</div>
+
     <button class="quick"><span>💡</span> شرح موضوع جديد</button>
     <button class="quick"><span>▦</span> حل مسألة</button>
     <button class="quick"><span>📊</span> اختبار مستواي</button>
     <button class="quick"><span>ⓘ</span> معلومات عن المنصة</button>
-    <div class="ask"><input id="question" placeholder="اكتب سؤالك هنا..."><button id="send" aria-label="إرسال">➤</button></div>
+
+    <div class="ask">
+      <input id="question" placeholder="اكتب سؤالك هنا...">
+      <button id="send" aria-label="إرسال">➤</button>
+    </div>
   </aside>
+
+  <!-- المحتوى الرئيسي -->
   <main class="center">
-    <section class="banner">
-      <div class="banner-books">🎓📚</div>
-      <div class="banner-title"><h1>تعلم .. تدرب .. تفوق</h1><p>(معًا نحو النجاح والتميز)</p></div>
-      <div class="banner-motto">You<br>Can Do It!</div>
-    </section>
-    <section class="section-box">
-      <div class="section-head"><div><h2>الفيزياء - الثانوية العامة</h2><p>أخر محطتك للبدء في رحلتك التعليمية</p></div><span class="atom">⚛</span></div>
-      <div class="grades">
-     
-        
 
-  <article class="grade">
-    <div class="number">❴1❵</div>
-    <div class="art">⚙️</div>
-    <h3>الصف الأول الثانوي</h3>
-    <p>شرح - فهم - تدريبات - امتحانات</p>
-    <a href="first-grade.html" class="enter">ادخل الآن　❯</a>
-  </article>
+    <div id="home-content">
 
-  <article class="grade">
-    <div class="number">❴2❵</div>
-    <div class="art">🧲</div>
-    <h3>الصف الثاني الثانوي</h3>
-    <p>شرح - فهم - تدريبات - امتحانات</p>
-    <a href="second-grade.html" class="enter">ادخل الآن　❯</a>
-  </article>
+      <section class="banner">
+        <div class="banner-books">🎓📚</div>
+        <div class="banner-title">
+          <h1>تعلم .. تدرب .. تفوق</h1>
+          <p>(معًا نحو النجاح والتميز)</p>
+        </div>
+        <div class="banner-motto">You<br>Can Do It!</div>
+      </section>
 
-  <article class="grade">
-    <div class="number">❴3❵</div>
-    <div class="art">⚛</div>
-    <h3>الصف الثالث الثانوي</h3>
-    <p>شرح - فهم - تدريبات - امتحانات</p>
-    <a href="third-grade.html" class="enter">ادخل الآن　❯</a>
-  </article>
+      <!-- الثانوية العامة -->
+      <section class="section-box">
+        <div class="section-head">
+          <div>
+            <h2>الفيزياء - الثانوية العامة</h2>
+            <p>أخر محطتك للبدء في رحلتك التعليمية</p>
+          </div>
+          <span class="atom">⚛</span>
+        </div>
 
-</div>
+        <div class="grades">
 
-    </section>
-    <section class="section-box">
-      <div class="section-head">
-  <div>
-    <h2>كلية الحاسبات والذكاء الاصطناعي</h2>
-    <p>كل ما تحتاجه في رحلتك الجامعية</p>
-  </div>
-  <span class="atom">▣</span>
-</div>
+          <article class="grade">
+            <div class="number">❴1❵</div>
+            <div class="art">⚙️</div>
+            <h3>الصف الأول الثانوي</h3>
+            <p>شرح - فهم - تدريبات - امتحانات</p>
+            <a href="first-grade.html" class="enter">ادخل الآن　❯</a>
+          </article>
 
-<div class="college">
+          <article class="grade">
+            <div class="number">❴2❵</div>
+            <div class="art">🧲</div>
+            <h3>الصف الثاني الثانوي</h3>
+            <p>شرح - فهم - تدريبات - امتحانات</p>
+            <a href="second-grade.html" class="enter">ادخل الآن　❯</a>
+          </article>
 
-  <article class="subject">
-    <div class="symbol">⌨</div>
-    <h3>Intro to CS</h3>
-    <p>مقدمة في علوم الحاسب</p>
-    <a class="enter" href="college.html">ادخل الآن　❯</a>
-  </article>
+          <article class="grade">
+            <div class="number">❴3❵</div>
+            <div class="art">⚛</div>
+            <h3>الصف الثالث الثانوي</h3>
+            <p>شرح - فهم - تدريبات - امتحانات</p>
+            <a href="third-grade.html" class="enter">ادخل الآن　❯</a>
+          </article>
 
-  <article class="subject">
-    <div class="symbol">▦</div>
-    <h3>Electronics</h3>
-    <p>الإلكترونيات</p>
-    <a class="enter" href="college.html">ادخل الآن　❯</a>
-  </article>
+        </div>
+      </section>
 
-  <article class="subject">
-    <div class="symbol">⚛</div>
-    <h3>Physics</h3>
-    <p>الفيزياء</p>
-    <a class="enter" href="college.html">ادخل الآن　❯</a>
-  </article>
+      <!-- مواد كلية الحاسبات الخمسة -->
+      <section class="section-box">
+        <div class="section-head">
+          <div>
+            <h2>كلية الحاسبات والذكاء الاصطناعي</h2>
+            <p>كل ما تحتاجه في رحلتك الجامعية</p>
+          </div>
+          <span class="atom">▣</span>
+        </div>
 
-  <article class="subject">
-    <div class="symbol">∑</div>
-    <h3>Math 1</h3>
-    <p>رياضيات متقدمة</p>
-    <a class="enter" href="college.html">ادخل الآن　❯</a>
-  </article>
+        <div class="college">
 
-  <article class="subject">
-    <div class="symbol">▦</div>
-    <h3>Math Zero</h3>
-    <p>رياضيات تمهيدية</p>
-    <a class="enter" href="college.html">ادخل الآن　❯</a>
-  </article>
+          <article class="subject">
+            <div class="symbol">⌨</div>
+            <h3>Intro to CS</h3>
+            <p>مقدمة في علوم الحاسب</p>
+            <a class="enter" href="college.html">ادخل الآن　❯</a>
+          </article>
 
-</div>
-      </div>
-    </section>
+          <article class="subject">
+            <div class="symbol">▦</div>
+            <h3>Electronics</h3>
+            <p>الإلكترونيات</p>
+            <a class="enter" href="college.html">ادخل الآن　❯</a>
+          </article>
+
+          <article class="subject">
+            <div class="symbol">⚛</div>
+            <h3>Physics</h3>
+            <p>الفيزياء</p>
+            <a class="enter" href="college.html">ادخل الآن　❯</a>
+          </article>
+
+          <article class="subject">
+            <div class="symbol">∑</div>
+            <h3>Math 1</h3>
+            <p>رياضيات متقدمة</p>
+            <a class="enter" href="college.html">ادخل الآن　❯</a>
+          </article>
+
+          <article class="subject">
+            <div class="symbol">▦</div>
+            <h3>Math Zero</h3>
+            <p>رياضيات تمهيدية</p>
+            <a class="enter" href="college.html">ادخل الآن　❯</a>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- مساحة عرض الأقسام عند الضغط على القائمة -->
+    <section class="extra-view" id="extra-view" hidden></section>
+
   </main>
+
+  <!-- القائمة الجانبية اليمنى -->
   <aside class="side">
-    <a class="nav-link active" href="#"><span>الرئيسية</span><span class="ico">⌂</span></a>
+
+    <a class="nav-link active" href="#" data-view="home">
+      <span>الرئيسية</span><span class="ico">⌂</span>
+    </a>
+
     <div class="nav-title">الثانوية العامة　🎓</div>
-    
-    <a class="nav-link" href="first-grade.html"><span>الصف الأول الثانوي</span><span class="ico">›</span></a>
 
+    <a class="nav-link" href="first-grade.html">
+      <span>الصف الأول الثانوي</span><span class="ico">›</span>
+    </a>
 
-<a class="nav-link" href="second-grade.html"><span>الصف الثاني الثانوي</span><span class="ico">›</span></a>
+    <a class="nav-link" href="second-grade.html">
+      <span>الصف الثاني الثانوي</span><span class="ico">›</span>
+    </a>
 
-<a class="nav-link" href="third-grade.html"><span>الصف الثالث الثانوي</span><span class="ico">›</span></a>
+    <a class="nav-link" href="third-grade.html">
+      <span>الصف الثالث الثانوي</span><span class="ico">›</span>
+    </a>
+
     <div class="nav-divider"></div>
-    <a class="nav-link" href="college.html"><span>كلية الحاسبات</span><span class="ico">▣</span></a>
-    <a class="nav-link nav-small" href="#"><span>البرمجة وعلوم الحاسب</span><span class="ico">›</span></a>
-    <a class="nav-link nav-small" href="#"><span>الرياضيات</span><span class="ico">›</span></a>
-    <a class="nav-link nav-small" href="#"><span>الإلكترونيات</span><span class="ico">›</span></a>
-    <a class="nav-link nav-small" href="#"><span>بقية مواد الكلية</span><span class="ico">›</span></a>
+
+    <a class="nav-link" href="college.html">
+      <span>كلية الحاسبات</span><span class="ico">▣</span>
+    </a>
+
+    <a class="nav-link" href="#programming" data-view="programming">
+      <span>البرمجة</span><span class="ico">⌨</span>
+    </a>
+
+    <a class="nav-link disabled-link" href="#" aria-disabled="true" title="سيتم تفعيل هذا القسم مستقبلًا">
+      <span>مواد أخرى</span><span class="ico">🔒</span>
+    </a>
+
     <div class="nav-divider"></div>
-    <button class="nav-button">المساعد الذكي　🤖</button>
-    <button class="nav-button">المكتبة الشاملة　📚</button>
-    <button class="nav-button">الاختبارات والامتحانات　📝</button>
-    <button class="nav-button">لوحة المتابعة　📊</button>
-    <button class="nav-button purple">الإعدادات　⚙</button>
+
+    <button class="nav-button" data-view="assistant">المساعد الذكي　🤖</button>
+    <button class="nav-button" data-view="library">المكتبة الشاملة　📚</button>
+    <button class="nav-button" data-view="exams">الاختبارات والامتحانات　📝</button>
+    <button class="nav-button" data-view="dashboard">لوحة المتابعة　📊</button>
+    <button class="nav-button purple" data-view="settings">الإعدادات　⚙</button>
+
   </aside>
+
 </div>
-<footer class="footer"><span>سياسة الخصوصية　🛡</span><span>عن المنصة　ⓘ</span><span>تواصل معنا　☏</span><span class="slogan">🏆 النجاح بيبدأ بخطوة .. وأنت الآن على الطريق الصحيح</span><span>مع تحياتي ..　<i>Abdelwahab Sayed</i></span></footer>
+
+<footer class="footer">
+  <span>سياسة الخصوصية　🛡</span>
+  <span>عن المنصة　ⓘ</span>
+  <span>تواصل معنا　☏</span>
+  <span class="slogan">🏆 النجاح بيبدأ بخطوة .. وأنت الآن على الطريق الصحيح</span>
+  <span>مع تحياتي ..　<i>Abdelwahab Sayed</i></span>
+</footer>
+
 <script>
-document.getElementById('theme').addEventListener('click',()=>document.documentElement.classList.toggle('light'));
-document.getElementById('send').addEventListener('click',()=>{const q=document.getElementById('question');if(q.value.trim()){alert('المساعد الذكي قيد التجهيز.');q.value='';}});
-  document.querySelectorAll('.grade').forEach(card => {
-  card.style.cursor = 'pointer';
-  card.addEventListener('click', event => {
-    if (event.target.closest('a')) return;
-    const link = card.querySelector('a[href]');
-    if (link) window.location.href = link.href;
+
+/* تغيير الوضع */
+document.getElementById('theme').addEventListener('click',()=>{
+  document.documentElement.classList.toggle('light');
+});
+
+/* رسالة المساعد */
+document.getElementById('send').addEventListener('click',()=>{
+  const q=document.getElementById('question');
+  if(q.value.trim()){
+    alert('المساعد الذكي قيد التجهيز.');
+    q.value='';
+  }
+});
+
+/* محتوى الأقسام */
+const views={
+
+  programming:`
+    <h2>قسم البرمجة</h2>
+    <p>مسار تعليمي مستقل لتعلم البرمجة وتطوير المهارات العملية، وليس مادة من مواد كلية الحاسبات.</p>
+    <div class="view-list">
+      <div class="view-item"><strong>Python</strong>تعلم أساسيات بايثون والتطبيقات العملية</div>
+      <div class="view-item"><strong>C++</strong>تعلم البرمجة وحل المشكلات</div>
+      <div class="view-item"><strong>Java</strong>مبادئ البرمجة وتطبيقاتها</div>
+      <div class="view-item"><strong>HTML & CSS</strong>إنشاء وتصميم صفحات الويب</div>
+      <div class="view-item"><strong>JavaScript</strong>إضافة التفاعل إلى مواقع الويب</div>
+      <div class="view-item"><strong>Git & GitHub</strong>إدارة المشروعات وحفظ الأكواد</div>
+      <div class="view-item"><strong>مشروعات عملية</strong>تطبيق ما تتعلمه في مشروعات حقيقية</div>
+    </div>
+    <p>سيتم إضافة الدروس والمحتوى التدريبي تدريجيًا.</p>
+  `,
+
+  assistant:`
+    <h2>المساعد الذكي 🤖</h2>
+    <p>قسم المساعدة التعليمية. يمكن أن يساعدك مستقبلًا في فهم الدروس وتبسيط المعلومات والتدرب على حل المسائل.</p>
+    <div class="view-item"><strong>المساعد الذكي قيد التجهيز</strong>سيتم تفعيل المحادثة والإجابات التعليمية في مرحلة لاحقة.</div>
+  `,
+
+  library:`
+    <h2>المكتبة الشاملة 📚</h2>
+    <p>مساحة لتجميع الكتب والمذكرات والملخصات والمراجع التعليمية.</p>
+    <div class="view-item"><strong>المكتبة قيد التجهيز</strong>سيتم إضافة الملفات والمصادر التعليمية تدريجيًا.</div>
+  `,
+
+  exams:`
+    <h2>الاختبارات والامتحانات 📝</h2>
+    <p>قسم مخصص للتدريبات والاختبارات وقياس مستوى التقدم.</p>
+    <div class="view-item"><strong>الاختبارات قيد التجهيز</strong>سيتم إضافة نماذج الأسئلة والامتحانات لاحقًا.</div>
+  `,
+
+  dashboard:`
+    <h2>لوحة المتابعة 📊</h2>
+    <p>مساحة لمتابعة الدروس والواجبات والنتائج ومستوى التقدم.</p>
+    <div class="view-item"><strong>لوحة المتابعة قيد التجهيز</strong>سيتم تفعيل متابعة التقدم والدرجات لاحقًا.</div>
+  `,
+
+  settings:`
+    <h2>الإعدادات ⚙</h2>
+    <p>يمكنك تغيير مظهر المنصة من زر الوضع الفاتح والداكن الموجود أعلى الصفحة.</p>
+    <div class="view-item"><strong>إعدادات المنصة</strong>سيتم إضافة باقي خيارات الإعدادات لاحقًا.</div>
+  `
+
+};
+
+/* التنقل داخل مساحة المحتوى */
+const homeContent=document.getElementById('home-content');
+const extraView=document.getElementById('extra-view');
+
+function openView(name){
+  if(name==='home'){
+    homeContent.hidden=false;
+    extraView.hidden=true;
+  }else if(views[name]){
+    homeContent.hidden=true;
+    extraView.innerHTML=views[name];
+    extraView.hidden=false;
+  }
+  document.querySelectorAll('.side [data-view]').forEach(item=>{
+    item.classList.toggle('active',item.dataset.view===name);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.querySelectorAll('.side [data-view]').forEach(item=>{
+  item.addEventListener('click',event=>{
+    event.preventDefault();
+    openView(item.dataset.view);
   });
 });
+
+/* منع فتح قسم مواد أخرى قبل تجهيزه */
+document.querySelector('.disabled-link').addEventListener('click',event=>{
+  event.preventDefault();
+  alert('سيتم إضافة مواد الكليات الأخرى مستقبلًا.');
+});
+
+/* بطاقات الصفوف قابلة للضغط */
+document.querySelectorAll('.grade').forEach(card=>{
+  card.style.cursor='pointer';
+  card.addEventListener('click',event=>{
+    if(event.target.closest('a'))return;
+    const link=card.querySelector('a[href]');
+    if(link)window.location.href=link.href;
+  });
+});
+
+/* أزرار المساعد السريعة */
+document.querySelectorAll('.quick').forEach(button=>{
+  button.addEventListener('click',()=>{
+    alert('هذه الخاصية قيد التجهيز.');
+  });
+});
+
 </script>
+
 </body>
 </html>
