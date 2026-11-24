@@ -18,8 +18,10 @@ main{width:min(1050px,90%);margin:45px auto}
 .hero p{color:#c5d9ec;margin:0}
 h2{color:#75ceff;margin:35px 0 18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
-.card{background:#10243d;border:1px solid #24466c;border-radius:16px;padding:22px;transition:.2s}
-.card:hover{transform:translateY(-4px);border-color:#66c7ff}
+.card-link{display:block;height:100%;border-radius:16px}
+.card{height:100%;background:#10243d;border:1px solid #24466c;border-radius:16px;padding:22px;transition:.2s}
+.card-link:hover .card{transform:translateY(-4px);border-color:#66c7ff}
+.card-link:focus-visible{outline:2px solid #66c7ff;outline-offset:4px}
 .card h3{color:#8bd7ff;margin-top:0}
 .card p{color:#c2d0df;margin-bottom:0}
 .note{margin-top:25px;padding:18px;background:#0c1e36;border:1px solid #24466c;border-radius:14px;color:#c5d9ec}
@@ -41,27 +43,51 @@ footer{text-align:center;padding:25px;color:#91a9c1;border-top:1px solid #24466c
 
 <h2>مواد الفرقة الأولى</h2>
 <section class="grid">
+
+<a class="card-link" href="math-1.html">
 <article class="card">
 <h3>📐 Math 1</h3>
-<p>الرياضيات 1</p>
+<p>رياضيات متقدمة</p>
 </article>
+</a>
 
+<a class="card-link" href="math-zero.html">
 <article class="card">
-<h3>📘 Math 0</h3>
-<p>الرياضيات 0</p>
+<h3>📘 Math Zero</h3>
+<p>رياضيات تمهيدية</p>
 </article>
+</a>
 
+<a class="card-link" href="electronics.html">
 <article class="card">
 <h3>⚡ Electronics</h3>
 <p>الإلكترونيات</p>
 </article>
+</a>
 
+<a class="card-link" href="physics.html">
 <article class="card">
 <h3>🔬 Physics</h3>
 <p>الفيزياء</p>
 </article>
+</a>
 
+<a class="card-link" href="intro-cs.html">
 <article class="card">
 <h3>💻 Intro to CS</h3>
 <p>مقدمة في علوم الحاسب</p>
 </article>
+</a>
+
+</section>
+
+<div class="note">
+اختر المادة التي تريد دراستها للوصول إلى صفحة المقرر ومحتواه التعليمي.
+</div>
+</main>
+
+<footer>
+ABDELWAHAB SAYED
+</footer>
+</body>
+</html>
